@@ -1,8 +1,10 @@
 module.exports = {
   queryString: [
     'wal mart',
-    'target',
-    'comcast'
+    '@target',
+    'comcast',
+    'time warner',
+    'con ed'
   ],
   queryStringSubQuery: [
     ' sucks'
