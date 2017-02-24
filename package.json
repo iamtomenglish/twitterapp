@@ -1,5 +1,5 @@
 {
-  "name": "twitter-bot",
+  "name": "thisbrandsucks",
   "version": "1.0.0",
   "description": "twitter bot bootstrap",
   "main": "index.js",
@@ -17,5 +17,13 @@
     "twit": "^2.2.5",
     "unique-random-array": "^1.0.0",
     "unirest": "^0.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spences10/twitter-bot-bootstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spences10/twitter-bot-bootstrap/issues"
+  },
+  "homepage": "https://github.com/spences10/twitter-bot-bootstrap#readme"
 }

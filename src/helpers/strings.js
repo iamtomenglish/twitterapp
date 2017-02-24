@@ -1,9 +1,9 @@
 module.exports = {
   queryString: [
-    ''
+    'wal mart'
   ],
   queryStringSubQuery: [
-    ''
+    ' sucks'
   ],
   blockedStrings: [
     ''
