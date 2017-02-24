@@ -3,8 +3,8 @@ module.exports = {
     '@walmart',
     '@target',
     '@comcast',
-    'time warner',
-    'con ed'
+    '@TWC',
+    '@ConEdison'
   ],
   queryStringSubQuery: [
     ' sucks'
