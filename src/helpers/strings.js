@@ -1,6 +1,8 @@
 module.exports = {
   queryString: [
-    'wal mart'
+    'wal mart',
+    'target',
+    'comcast'
   ],
   queryStringSubQuery: [
     ' sucks'
