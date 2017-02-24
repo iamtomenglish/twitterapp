@@ -1,8 +1,8 @@
 module.exports = {
   queryString: [
-    'wal mart',
+    '@walmart',
     '@target',
-    'comcast',
+    '@comcast',
     'time warner',
     'con ed'
   ],
