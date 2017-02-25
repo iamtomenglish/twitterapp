@@ -454,7 +454,6 @@ module.exports = {
 "@msiUSA",
 "@Respawn",
 "@DealsPlus",
-"@AgainstSuicide",
 "@JINX",
 "@TheGregHerman",
 "@HPE_Cloud",
