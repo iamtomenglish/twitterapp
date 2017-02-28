@@ -1012,6 +1012,6 @@ module.exports = {
     'popular'
   ],
   responseString: [
-    'Thanks @screenName What brands do you think suck? #thesebrandssuck'
+    "Thanks @screenName What brands do you think suck? #thesebrandssuck"
   ]
 }
