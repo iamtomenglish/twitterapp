@@ -65,10 +65,10 @@ let retweet = function () {
           var confidence = parseFloat(result.body.result.confidence)
           console.log(confidence, sentim)
           // if sentiment is Negative and the confidence is above 75%
-          if (sentim === 'Negative' && confidence >= 75) {
-            console.log('RETWEET NEG NEG NEG', sentim, retweetText)
-            return
-          }
+          //if (sentim === 'Negative' && confidence >= 75) {
+            //console.log('RETWEET NEG NEG NEG', sentim, retweetText)
+            //return
+          //}
         })
       } catch (e) {
         console.log('retweetId DERP!', e.message, 'Query String:', paramQS)
@@ -128,8 +128,8 @@ var favoriteTweet = function () {
           var sentim = result.body.result.sentiment
           var confidence = parseFloat(result.body.result.confidence)
           console.log(confidence, sentim)
-        // if sentiment is Negative and the confidence is above 75%
-          if (sentim === 'Negative' && confidence >= 75) {
+        // if sentiment is Negative and the confidence is above 25%
+          if (sentim === 'Negative' && confidence >= 25) {
             console.log('FAVORITE NEG NEG NEG', sentim, favoriteText)
             return
           }
