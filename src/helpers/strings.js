@@ -1000,8 +1000,7 @@ module.exports = {
 "@lifeway_kefir"
   ],
   queryStringSubQuery: [
-    ' sucks',
-    ' suck'
+    ' sucks'
   ],
   blockedStrings: [
   ],
