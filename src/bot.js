@@ -95,67 +95,6 @@ retweet()
 // retweet in every x minutes
 setInterval(retweet, 1000 * 60 * retweetFrequency)
 
-// FAVORITE BOT====================
-
-// find a random tweet and 'favorite' it
-var favoriteTweet = function () {
-  var paramQS = qs()
-  paramQS += qsSq()
-  var paramRT = rt()
-  var params = {
-    q: paramQS + paramBls(),
-    result_type: paramRT,
-    lang: 'en'
-  }
-
-    // find the tweet
-  Twitter.get('search/tweets', params, function (err, data) {
-    if (err) {
-      console.log(`ERR CAN'T FIND TWEET:`, err)
-    } else {
-        // find tweets
-      var tweet = data.statuses
-      var randomTweet = ranDom(tweet) // pick a random tweet
-
-        // if random tweet exists
-      if (typeof randomTweet !== 'undefined') {
-            // run sentiment check ==========
-            // setup http call
-        var httpCall = sentiment.init()
-        var favoriteText = randomTweet['text']
-
-        httpCall.send('txt=' + favoriteText).end(function (result) {
-          var sentim = result.body.result.sentiment
-          var confidence = parseFloat(result.body.result.confidence)
-          console.log(confidence, sentim)
-        // if sentiment is Negative and the confidence is above 25%
-          if (sentim === 'Negative' && confidence >= 25) {
-            console.log('FAVORITE NEG NEG NEG', sentim, favoriteText)
-            return
-          }
-        })
-
-            // Tell TWITTER to 'favorite'
-        Twitter.post('favorites/create', {
-          id: randomTweet.id_str
-        }, function (err, response) {
-                // if there was an error while 'favorite'
-          if (err) {
-            console.log('CANNOT BE FAVORITE... Error: ', err, ' Query String: ' + paramQS)
-          } else {
-            console.log('FAVORITED... Success!!!', ' Query String: ' + paramQS)
-          }
-        })
-      }
-    }
-  })
-}
-
-// favorite on bot start
-favoriteTweet()
-    // favorite in every x minutes
-setInterval(favoriteTweet, 1000 * 60 * favoriteFrequency)
-
 // STREAM API for interacting with a USER =======
 // set up a user stream
 var stream = Twitter.stream('user')
