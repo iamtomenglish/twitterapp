@@ -1008,6 +1008,6 @@ module.exports = {
     'mixed'
   ],
   responseString: [
-    "Hey @screenName What brands do you think suck? #thisbrandsucks"
+    "thanks for the follow @screenName, who's pissing you off these days? #thisbrandsucks"
   ]
 }
