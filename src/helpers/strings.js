@@ -1006,8 +1006,5 @@ module.exports = {
   ],
   resultType: [
     'mixed'
-  ],
-  responseString: [
-    "thanks for the follow @screenName, who's pissing you off these days? #thisbrandsucks"
   ]
 }
