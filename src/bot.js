@@ -24,7 +24,6 @@ const username = config.twitter.username
 let qs = ura(strings.queryString)
 let qsSq = ura(strings.queryStringSubQuery)
 let rt = ura(strings.resultType)
-let rs = ura(strings.responseString)
 
 // https://dev.twitter.com/rest/reference/get/search/tweets
 // A UTF-8, URL-encoded search query of 500 characters maximum, including operators.
@@ -110,16 +109,6 @@ function followed (event) {
         // get USER's twitter handle (screen name)
   var screenName = event.source.screen_name
 
-    // CREATE RANDOM RESPONSE  ============================
-  var responseString = rs()
-  var find = 'screenName'
-  var regex = new RegExp(find, 'g')
-  responseString = responseString.replace(regex, screenName)
-
-  // function that replies back to every USER who followed for the first time
-  console.log(responseString)
-  tweetNow(responseString)
-}
 
 // function definition to tweet back to USER who followed
 function tweetNow (tweetTxt) {

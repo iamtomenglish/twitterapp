@@ -1006,5 +1006,8 @@ module.exports = {
   ],
   resultType: [
     'mixed'
+  ],
+  responseString: [
+    ""
   ]
 }
